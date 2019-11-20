@@ -1,0 +1,67 @@
+.design {
+    background-color: rgba(255, 255, 255, 0.85);
+    background-image: url(../img/Layer_45.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.design-wrap {
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 50px;
+    
+
+    &__tablet {
+        position: relative;
+        max-width: 477px;
+        margin: auto;
+    }
+
+    &__wrapper {
+        position: absolute;
+        bottom: -50px;
+        right: -5px;
+        
+    }
+
+    &__mobile {
+        width: 150px;
+    }
+}
+
+.design-title {
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 760px) {
+    .design-wrap {
+
+        margin-bottom: 60px;
+
+        &__mobile {
+            width: 220px;
+        } 
+
+        &__wrapper {
+            bottom: -60px;
+            right: -50px;
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .design-wrap {
+        margin-bottom: 80px;
+        &__mobile {
+            width: 274px;
+        } 
+
+        &__wrapper {
+            bottom: -90px;
+            right: -160px;
+            
+        }
+    }
+}

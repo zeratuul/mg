@@ -1,0 +1,92 @@
+$main-ff: 'Montserrat', sans-serif;
+$main-ff: 'Montserrat', sans-serif;
+$second-ff: 'Kaushan Script', cursive;
+
+$aqua: #95e1d3;
+$white: #ffffff;
+$black-ph:#333333;
+$grey-ph: #999999;
+$whitergba: rgba(255,255,255,0.3);
+$rose:#f38181;
+
+body {
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #999999;
+	background: $white;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+	padding: 0 10px;
+}
+
+
+.h3-header {
+	font-family: Montserrat;
+    color: $black-ph;
+    text-transform: uppercase;
+}
+
+.grey-ph {
+	color: $grey-ph;
+    font-size: 15px;
+}
+
+.italic-ph {
+	color: $grey-ph;
+	font-style: italic;
+    font-size: 15px;
+}
+
+.title {
+	text-transform: uppercase;
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	color: $black-ph;
+	
+	&::after {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 2px;
+        background-color: $rose;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+    }
+
+	&__sub {
+		font-family: "Kaushan Script", cursive;
+		font-weight: 400;
+		text-transform: none;
+		display: block;
+		line-height: 35px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.title {
+		font-size: 22px;
+
+		&::after {
+			bottom: -25px;
+			height: 3px;
+			width: 60px;
+		}
+
+		&__sub {
+			line-height: 40px;
+		}
+	}
+
+	.container {
+		padding: 0;
+	}
+}
+

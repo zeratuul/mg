@@ -1,0 +1,149 @@
+.team {
+    padding-bottom: 40px;
+    
+    &__text {
+        text-align: center;
+        max-width: 700px;
+        margin: auto;
+        padding-bottom: 40px;
+    }
+
+    &__name,
+    &__post {
+        text-align: center;
+    }
+
+    &__name {
+        padding-top: 15px;
+        padding-bottom: 2px;
+        font-weight: 700;
+    }
+}
+
+.team-title {
+    margin-bottom: 40px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &__color {
+        background-color: $aqua;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.team-scroll {
+    display: flex;
+    flex-direction: row;
+
+
+    
+
+    &__fb,
+    &__tw,
+    &__pt,
+    &__inst {
+        display: block;
+    }
+
+    &__fb {
+        background-color: #f38181;
+        padding: 15px 20px 15px 23px;
+    }
+
+    &__tw {
+        background-color: #fce38a;
+        padding: 17px 15px 15px 15px;
+        border-right: 1px solid rgba(243,129,129,0.5);
+    }
+
+    &__pt {
+        background-color: #fce38a;
+        padding: 15px 18px;
+        border-right: 1px solid rgba(243,129,129,0.5);
+    }
+
+    &__inst {
+        background-color: #fce38a;
+        padding: 15px 16px;
+        border-right: 1px solid rgba(243,129,129,0.5);
+    }
+}
+
+.team-wrap {
+    position: relative;
+
+    &__overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease;
+        background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+        opacity: 0;
+    }
+}
+
+.team-wrap:hover {
+    transform: translate(-10px, -10px);
+    transition: all 0.3s ease;
+}
+
+.team-wrap:hover .team-wrap__overlay {
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 760px) {
+    .team-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__item {
+            width: calc((100% / 3) - 5px);
+        }
+    }
+
+    .team-title {
+        margin-bottom: 50px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .team {
+
+        &__text {
+            max-width: 954px;
+        }
+}
+
+.team-title {
+    margin-bottom: 60px;
+}
+
+.team-list {
+    &__item {
+        width: calc((100% / 3) - 10px);
+    }
+}
+
+
+}
+
